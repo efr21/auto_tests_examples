@@ -9,7 +9,7 @@ class TextBoxPageLocators:
     EMAIL = (By.CSS_SELECTOR, 'input[id="userEmail"]')
     CURRENT_ADDRESS = (By.CSS_SELECTOR, 'textarea[id="currentAddress"]')
     PERMANENT_ADDRESS = (By.CSS_SELECTOR, 'textarea[id="permanentAddress"]')
-    SUBMIT = (By.CSS_SELECTOR, 'button[id="submit"]')
+    SUBMIT = (By.XPATH, '//button[@id="submit"]')
 
     # created form
 
