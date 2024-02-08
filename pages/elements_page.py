@@ -6,10 +6,10 @@ class TextBoxPage(BasePage):
     locators = TextBoxPageLocators()
 
     def fill_all_fields(self):
-        self.element_is_visible(self.locators.FULL_NAME).send_keys("Ivan")
-        self.element_is_visible(self.locators.EMAIL).send_keys("fl15@mail.com")
-        self.element_is_visible(self.locators.CURRENT_ADDRESS).send_keys("address")
-        self.element_is_visible(self.locators.PERMANENT_ADDRESS).send_keys("address")
+        self.element_is_visible(self.locators.FULL_NAME).send_keys()
+        self.element_is_visible(self.locators.EMAIL).send_keys()
+        self.element_is_visible(self.locators.CURRENT_ADDRESS).send_keys()
+        self.element_is_visible(self.locators.PERMANENT_ADDRESS).send_keys()
         self.element_is_visible(self.locators.SUBMIT).click()
 
     def check_filled_form(self):
