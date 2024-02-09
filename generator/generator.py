@@ -4,6 +4,7 @@ from faker import Faker
 faker_ru = Faker('ru_RU')  # чтобы был русский
 Faker.seed()
 
+
 def generated_person():
     yield Person(
         full_name=faker_ru.first_name() + " " + faker_ru.last_name() + " " + faker_ru.middle_name(),
@@ -11,4 +12,3 @@ def generated_person():
         current_address=faker_ru.address(),
         permanent_address=faker_ru.address(),
     )
-
