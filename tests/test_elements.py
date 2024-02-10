@@ -1,5 +1,5 @@
 import time
-
+import allure
 # from pages.base_page import BasePage
 #
 #
@@ -12,9 +12,12 @@ import time
 from pages.elements_page import TextBoxPage, CheckBoxPage
 
 
+@allure.suite("Elements")
 class TestElements:
-    class TestTextBox:
 
+    @allure.feature("TextBox")
+    class TestTextBox:
+        @allure.title("Check TextBox")
         def test_text_box(self, driver):
             text_box_page = TextBoxPage(driver, 'https://demoqa.com/text-box')
             text_box_page.open()
@@ -27,7 +30,7 @@ class TestElements:
             assert permanent_address == output_perm_address, "the perm_address does not match"
 
     class TestCheckBox:
-
+        @allure.title("Check CheckBox")
         def test_check_box(self, driver):
             check_box_page = CheckBoxPage(driver, 'https://demoqa.com/checkbox')
             check_box_page.open()
@@ -38,4 +41,3 @@ class TestElements:
             print(input_checkbox)
             print(output_result)
             assert input_checkbox == output_result, 'checkboxes have not been selected'
-
